@@ -23,6 +23,11 @@ form {
     align-items: center;
 }
 
+form input {
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+
 form input,
 form button {
     padding: 0.5rem;
@@ -36,6 +41,8 @@ form button {
     background: white;
     cursor: pointer;
     transition: all 0.3s ease;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
 }
 
 form button:hover {
