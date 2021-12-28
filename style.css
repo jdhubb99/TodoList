@@ -86,7 +86,7 @@ form button:hover {
 }
 
 .checked-button {
-    background: rgb(73, 146, 73);
+    background: rgb(44, 189, 44);
 }
 
 .delete-button {
@@ -96,4 +96,9 @@ form button:hover {
 
 .todo-item {
     padding: 0rem 0.5rem;
+}
+
+.fa-trash,
+.fa-check {
+    pointer-events: none;
 }
