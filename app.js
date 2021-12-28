@@ -10,5 +10,24 @@ todoButton.addEventListener("click", addTodo);
 function addTodo(event) {
     // prevents form from submitting
     event.preventDefault();
-    console.log("hello");
+    // Todo Div
+    const todoDiv = document.createElement("div");
+    todoDiv.classList.add("todo");
+    // create li
+    const newTodo = document.createElement("li");
+    newTodo.innerText = "hello";
+    newTodo.classList.add("todo-item");
+    todoDiv.appendChild(newTodo);
+    // CHECKED OFF BUTTON
+    const checkedButton = document.createElement("button");
+    checkedButton.innerHTML = '<i class="fas fa-check"></i>';
+    checkedButton.classList.add("checked-button");
+    todoDiv.appendChild(checkedButton);
+    // DELETE BUTTON
+    const deleteButton = document.createElement("button");
+    deleteButton.innerHTML = '<i class="fas fa-trash"></i>';
+    deleteButton.classList.add("checked-button");
+    todoDiv.appendChild(deleteButton);
+    // Append to todo list
+    todoList.appendChild(todoDiv);
 } // addTodo
