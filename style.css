@@ -37,7 +37,7 @@ form button {
 }
 
 form button {
-    color: #fda085;
+    color: #ff693f;
     background: white;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -46,7 +46,7 @@ form button {
 }
 
 form button:hover {
-    background: #fda085;
+    background: #ff693f;
     color: white;
 }
 
@@ -107,4 +107,43 @@ form button:hover {
 .completed {
     text-decoration: line-through;
     opacity: 0.5;
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    background: #ff693f;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.select:hover::after {
+    background: white;
+    color: #ff693f;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    width: 10rem;
+    color: #ff693f;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.filter-todo {
+    font-family: "Poppins", sans-serif;
 }
