@@ -52,8 +52,11 @@ function deleteCheck(event) {
     // DELETE TODO
     if (item.classList[0] === "delete-button") {
         const todo = item.parentElement;
+        todo.classList.add("fall");
         deleteLocalTodos(todo);
-        todo.remove();
+        todo.addEventListener("transitionend", event => {
+            todo.remove();
+        });
     } // if
 
     // CHECK TODO
