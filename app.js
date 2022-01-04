@@ -77,4 +77,3 @@ function filterTodo(event) {
         } // switch
     }); // forEach
 } // filterTodo
-
