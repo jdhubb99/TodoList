@@ -75,5 +75,6 @@ function filterTodo(event) {
                 } // if else
                 break;
         } // switch
-    });
+    }); // forEach
 } // filterTodo
+
