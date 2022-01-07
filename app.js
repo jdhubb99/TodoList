@@ -10,6 +10,14 @@ todoButton.addEventListener("click", addTodo);
 todoList.addEventListener("click", deleteCheck);
 filterOption.addEventListener("change", filterTodo);
 
+// Builds todo object
+class Todo {
+    constructor(task, isCompleted) {
+        this.task = task;
+        this.isCompleted = isCompleted;
+    }
+} // Todo
+
 // functions
 function addTodo(event) {
     // prevents form from submitting
@@ -63,6 +71,9 @@ function deleteCheck(event) {
     if (item.classList[0] === "checked-button") {
         const todo = item.parentElement;
         todo.classList.toggle("completed");
+        const newTodoInput = todo.children[0].innerText;
+        //console.log(newTodoInput);
+        saveLocalCheckedTodos(newTodoInput);
     } // if
 } // deleteCheck
 
@@ -149,3 +160,22 @@ function checkLocalTodos() {
     } // if else
     return todos;
 } // checkLocalTodos
+
+/*
+function saveLocalCheckedTodos(todo) {
+    let checkedTodos = checkLocalCheckedTodos();
+    checkedTodos.push(todo);
+    localStorage.setItem("checkedTodos", JSON.stringify(checkedTodos));
+} //saveLocalCheckedTodos
+
+function checkLocalCheckedTodos() {
+    let checkedTodos;
+    // check if local checkedTodos array has elements
+    if (localStorage.getItem("checkedTodos") === null) {
+        checkedTodos = [];
+    } else {
+        checkedTodos = JSON.parse(localStorage.getItem("checkedTodos"));
+    } // if else
+    return checkedTodos;
+} // checkLocalCheckedTodos
+*/
